@@ -1,49 +1,50 @@
-// import React, { useState } from "react";
-// import { Quiz } from "../interfaces/quiz";
-// import { Question, QuestionType } from "../interfaces/question";
-// import { QuizList } from "./QuizList";
-// import { AddQuizModal } from "./AddQuizModal";
+import React, { useState } from "react";
+import { Quiz } from "../interfaces/quiz";
+import { Question, QuestionType } from "../interfaces/question";
+import { QuizList } from "./QuizList";
+import { AddQuizModal } from "./AddQuizModal";
 
 import "./Quizzer.css";
-// import sample from "../data/quizzes.json";
+import sample from "../data/quizzes.json";
 
-// const QUIZZES = sample.map(
-//     (quiz): Quiz => ({
-//         ...quiz,
-//         questionList: quiz.questionList.map(
-//             (q): Question => ({
-//                 ...q,
-//                 submission: "",
-//                 type: q.type as QuestionType
-//             })
-//         )
-//     })
-// );
+const QUIZZES = sample.map(
+    (quiz): Quiz => ({
+        ...quiz,
+        questionList: quiz.questionList.map(
+            (q): Question => ({
+                ...q,
+                submission: "",
+                type: q.type as QuestionType
+            })
+        )
+    })
+);
 
 export const Quizzer = () => {
-    // const [quizzes, setQuizzes] = useState<Quiz[]>(QUIZZES);
-    // const [showAddModal, setShowAddModal] = useState(false);
+    const [quizzes, setQuizzes] = useState<Quiz[]>(QUIZZES);
+    const [showAddModal, setShowAddModal] = useState(false);
 
-    // function editQuiz(qId: number, newQuiz: Quiz) {
-    //     setQuizzes(
-    //         quizzes.map((q: Quiz): Quiz => (q.id === qId ? newQuiz : q))
-    //     );
-    // }
+    function editQuiz(qId: number, newQuiz: Quiz) {
+        setQuizzes(
+            quizzes.map((q: Quiz): Quiz => (q.id === qId ? newQuiz : q))
+        );
+    }
 
-    // function addQuiz(title: string, body: string) {
-    //     setQuizzes([...quizzes, newQuiz]);
-    // }
+    function addQuiz(title: string, body: string) {
+        setQuizzes([...quizzes, newQuiz]);
+    }
 
-    // function deleteQuiz(qId: number) {
-    //     setQuizzes(quizzes.filter((q: Quiz): boolean => qId !== q.id));
-    // }
+    function deleteQuiz(qId: number) {
+        setQuizzes(quizzes.filter((q: Quiz): boolean => qId !== q.id));
+    }
 
-    // const handleShowModal = () => setShowAddModal(true);
-    // const handleCloseModal = () => setShowAddModal(false);
+    const handleShowModal = () => setShowAddModal(true);
+    const handleCloseModal = () => setShowAddModal(false);
 
     return (
         <div className="quizzer">
-            {/* <QuizList
+            
+            <QuizList
                 quizzes={quizzes}
                 editQuiz={editQuiz}
                 deleteQuiz={deleteQuiz}
@@ -53,10 +54,10 @@ export const Quizzer = () => {
                 show={showAddModal}
                 handleClose={handleCloseModal}
                 addQuiz={addQuiz}
-            ></AddQuizModal> */}
+            ></AddQuizModal>
             <hr />
             <h2 style={{ color: "white" }}>Application Sketch</h2>
-            {/* { <img src={require("./sketchFINAL.jpg")} /> } */}
+            { <img src={require("./sketchFINAL.jpg")} /> }
             <hr />
             <div style={{ color: "white" }}>
                 <h2>Completed Features</h2>

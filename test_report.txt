@@ -1,0 +1,1033 @@
+
+> tasks@0.1.0 test
+> react-scripts test --coverage
+
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+FAIL src/quizzer/Quizzer.test.tsx
+  ● Quizzer Tests › Users can add a new quiz
+
+    TestingLibraryElementError: Unable to find an element with the text: Add New Quiz. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"quizzer"[39m
+        [36m>[39m
+          [36m<hr />[39m
+          [36m<h2[39m
+            [33mstyle[39m=[32m"color: white;"[39m
+          [36m>[39m
+            [0mApplication Sketch[0m
+          [36m</h2>[39m
+          [36m<hr />[39m
+          [36m<div[39m
+            [33mstyle[39m=[32m"color: white;"[39m
+          [36m>[39m
+            [36m<h2>[39m
+              [0mCompleted Features[0m
+            [36m</h2>[39m
+            [36m<ul[39m
+              [33mclass[39m=[32m"completedList"[39m
+            [36m>[39m
+              [36m<li>[39m
+                [0m [0m
+                [0mUsers can see a list of quizzes, including the quizzes title, description, and how many questions it has (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can select a specific quiz to see the questions, including the questions name, body, and points (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mQuiz questions can be of AT LEAST two types: a short answer question or multiple choice question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can enter or choose an answer for a quiz question, and be told if they are correct (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can see how many total points they have earned (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can clear out their existing answers for a quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can publish or unpublish a question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can filter the questions in a list so that only published questions are shown (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can edit the questions and fields of a quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can add a new quiz question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can delete an existing quiz question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can reorder quiz questions (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can add a new quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can delete an existing quiz (TESTED)[0m
+              [36m</li>[39m
+            [36m</ul>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      28 |     });
+      29 |     test("Users can add a new quiz", () => {
+    > 30 |         const button = screen.getByText("Add New Quiz");
+         |                               ^
+      31 |         expect(screen.queryByLabelText("Title: ")).not.toBeInTheDocument();
+      32 |         button.click();
+      33 |         expect(screen.queryByLabelText("Title:")).toBeInTheDocument();
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/quizzer/Quizzer.test.tsx:30:31)
+
+  ● Quizzer Tests › Users can see a list of quizzes, including the quizzes title, description, and how many questions it has
+
+    expect(received).toBeInTheDocument()
+
+    received value must be an HTMLElement or an SVGElement.
+    Received has value: null
+
+      39 |     test("Users can see a list of quizzes, including the quizzes title, description, and how many questions it has", () => {
+      40 |         for (let i = 0; i < QUIZZES.length; i++) {
+    > 41 |             expect(screen.queryByText(QUIZZES[i].title)).toBeInTheDocument();
+         |                                                          ^
+      42 |             expect(
+      43 |                 screen.queryByText(
+      44 |                     QUIZZES[i].questionList.length + " question",
+
+      at __EXTERNAL_MATCHER_TRAP__ (node_modules/expect/build/index.js:386:30)
+      at Object.toBeInTheDocument (node_modules/expect/build/index.js:387:15)
+      at Object.<anonymous> (src/quizzer/Quizzer.test.tsx:41:58)
+
+  ● Quizzer Tests › Users can select a specific quiz to see the questions, including the questions name, body, and points
+
+    TestingLibraryElementError: Unable to find an element with the text: Simple_Questions. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"quizzer"[39m
+        [36m>[39m
+          [36m<hr />[39m
+          [36m<h2[39m
+            [33mstyle[39m=[32m"color: white;"[39m
+          [36m>[39m
+            [0mApplication Sketch[0m
+          [36m</h2>[39m
+          [36m<hr />[39m
+          [36m<div[39m
+            [33mstyle[39m=[32m"color: white;"[39m
+          [36m>[39m
+            [36m<h2>[39m
+              [0mCompleted Features[0m
+            [36m</h2>[39m
+            [36m<ul[39m
+              [33mclass[39m=[32m"completedList"[39m
+            [36m>[39m
+              [36m<li>[39m
+                [0m [0m
+                [0mUsers can see a list of quizzes, including the quizzes title, description, and how many questions it has (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can select a specific quiz to see the questions, including the questions name, body, and points (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mQuiz questions can be of AT LEAST two types: a short answer question or multiple choice question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can enter or choose an answer for a quiz question, and be told if they are correct (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can see how many total points they have earned (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can clear out their existing answers for a quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can publish or unpublish a question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can filter the questions in a list so that only published questions are shown (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can edit the questions and fields of a quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can add a new quiz question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can delete an existing quiz question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can reorder quiz questions (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can add a new quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can delete an existing quiz (TESTED)[0m
+              [36m</li>[39m
+            [36m</ul>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      53 |
+      54 |     test("Users can select a specific quiz to see the questions, including the questions name, body, and points", () => {
+    > 55 |         const text = screen.getByText("Simple_Questions");
+         |                             ^
+      56 |         text.click();
+      57 |         expect(screen.queryByText("Exit")).toBeInTheDocument();
+      58 |         expect(
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/quizzer/Quizzer.test.tsx:55:29)
+
+  ● Quizzer Tests › Users can enter or choose an answer for a quiz question, and be told if they are correct
+
+    TestingLibraryElementError: Unable to find an element with the text: Simple_Questions. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"quizzer"[39m
+        [36m>[39m
+          [36m<hr />[39m
+          [36m<h2[39m
+            [33mstyle[39m=[32m"color: white;"[39m
+          [36m>[39m
+            [0mApplication Sketch[0m
+          [36m</h2>[39m
+          [36m<hr />[39m
+          [36m<div[39m
+            [33mstyle[39m=[32m"color: white;"[39m
+          [36m>[39m
+            [36m<h2>[39m
+              [0mCompleted Features[0m
+            [36m</h2>[39m
+            [36m<ul[39m
+              [33mclass[39m=[32m"completedList"[39m
+            [36m>[39m
+              [36m<li>[39m
+                [0m [0m
+                [0mUsers can see a list of quizzes, including the quizzes title, description, and how many questions it has (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can select a specific quiz to see the questions, including the questions name, body, and points (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mQuiz questions can be of AT LEAST two types: a short answer question or multiple choice question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can enter or choose an answer for a quiz question, and be told if they are correct (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can see how many total points they have earned (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can clear out their existing answers for a quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can publish or unpublish a question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can filter the questions in a list so that only published questions are shown (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can edit the questions and fields of a quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can add a new quiz question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can delete an existing quiz question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can reorder quiz questions (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can add a new quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can delete an existing quiz (TESTED)[0m
+              [36m</li>[39m
+            [36m</ul>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      77 |
+      78 |     test("Users can enter or choose an answer for a quiz question, and be told if they are correct", () => {
+    > 79 |         const text = screen.getByText("Simple_Questions");
+         |                             ^
+      80 |         text.click();
+      81 |         expect(screen.queryByText("Exit")).toBeInTheDocument();
+      82 |         expect(
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/quizzer/Quizzer.test.tsx:79:29)
+
+  ● Quizzer Tests › Users can see how many total points they have earned
+
+    TestingLibraryElementError: Unable to find an element with the text: Simple_Questions. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"quizzer"[39m
+        [36m>[39m
+          [36m<hr />[39m
+          [36m<h2[39m
+            [33mstyle[39m=[32m"color: white;"[39m
+          [36m>[39m
+            [0mApplication Sketch[0m
+          [36m</h2>[39m
+          [36m<hr />[39m
+          [36m<div[39m
+            [33mstyle[39m=[32m"color: white;"[39m
+          [36m>[39m
+            [36m<h2>[39m
+              [0mCompleted Features[0m
+            [36m</h2>[39m
+            [36m<ul[39m
+              [33mclass[39m=[32m"completedList"[39m
+            [36m>[39m
+              [36m<li>[39m
+                [0m [0m
+                [0mUsers can see a list of quizzes, including the quizzes title, description, and how many questions it has (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can select a specific quiz to see the questions, including the questions name, body, and points (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mQuiz questions can be of AT LEAST two types: a short answer question or multiple choice question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can enter or choose an answer for a quiz question, and be told if they are correct (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can see how many total points they have earned (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can clear out their existing answers for a quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can publish or unpublish a question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can filter the questions in a list so that only published questions are shown (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can edit the questions and fields of a quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can add a new quiz question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can delete an existing quiz question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can reorder quiz questions (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can add a new quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can delete an existing quiz (TESTED)[0m
+              [36m</li>[39m
+            [36m</ul>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      92 |
+      93 |     test("Users can see how many total points they have earned", () => {
+    > 94 |         const text = screen.getByText("Simple_Questions");
+         |                             ^
+      95 |         text.click();
+      96 |         expect(screen.queryByText(/\d\/\d/)).toBeInTheDocument();
+      97 |     });
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/quizzer/Quizzer.test.tsx:94:29)
+
+  ● Quizzer Tests › Users can clear out their existing answers for a quiz
+
+    TestingLibraryElementError: Unable to find an element with the text: Simple_Questions. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"quizzer"[39m
+        [36m>[39m
+          [36m<hr />[39m
+          [36m<h2[39m
+            [33mstyle[39m=[32m"color: white;"[39m
+          [36m>[39m
+            [0mApplication Sketch[0m
+          [36m</h2>[39m
+          [36m<hr />[39m
+          [36m<div[39m
+            [33mstyle[39m=[32m"color: white;"[39m
+          [36m>[39m
+            [36m<h2>[39m
+              [0mCompleted Features[0m
+            [36m</h2>[39m
+            [36m<ul[39m
+              [33mclass[39m=[32m"completedList"[39m
+            [36m>[39m
+              [36m<li>[39m
+                [0m [0m
+                [0mUsers can see a list of quizzes, including the quizzes title, description, and how many questions it has (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can select a specific quiz to see the questions, including the questions name, body, and points (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mQuiz questions can be of AT LEAST two types: a short answer question or multiple choice question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can enter or choose an answer for a quiz question, and be told if they are correct (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can see how many total points they have earned (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can clear out their existing answers for a quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can publish or unpublish a question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can filter the questions in a list so that only published questions are shown (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can edit the questions and fields of a quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can add a new quiz question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can delete an existing quiz question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can reorder quiz questions (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can add a new quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can delete an existing quiz (TESTED)[0m
+              [36m</li>[39m
+            [36m</ul>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+       98 |
+       99 |     test("Users can clear out their existing answers for a quiz", () => {
+    > 100 |         const text = screen.getByText("Simple_Questions");
+          |                             ^
+      101 |         text.click();
+      102 |         expect(screen.queryByText("Exit")).toBeInTheDocument();
+      103 |         expect(
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/quizzer/Quizzer.test.tsx:100:29)
+
+  ● Quizzer Tests › Users can publish or unpublish a question
+
+    TestingLibraryElementError: Unable to find an element with the text: Simple_Questions. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"quizzer"[39m
+        [36m>[39m
+          [36m<hr />[39m
+          [36m<h2[39m
+            [33mstyle[39m=[32m"color: white;"[39m
+          [36m>[39m
+            [0mApplication Sketch[0m
+          [36m</h2>[39m
+          [36m<hr />[39m
+          [36m<div[39m
+            [33mstyle[39m=[32m"color: white;"[39m
+          [36m>[39m
+            [36m<h2>[39m
+              [0mCompleted Features[0m
+            [36m</h2>[39m
+            [36m<ul[39m
+              [33mclass[39m=[32m"completedList"[39m
+            [36m>[39m
+              [36m<li>[39m
+                [0m [0m
+                [0mUsers can see a list of quizzes, including the quizzes title, description, and how many questions it has (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can select a specific quiz to see the questions, including the questions name, body, and points (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mQuiz questions can be of AT LEAST two types: a short answer question or multiple choice question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can enter or choose an answer for a quiz question, and be told if they are correct (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can see how many total points they have earned (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can clear out their existing answers for a quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can publish or unpublish a question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can filter the questions in a list so that only published questions are shown (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can edit the questions and fields of a quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can add a new quiz question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can delete an existing quiz question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can reorder quiz questions (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can add a new quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can delete an existing quiz (TESTED)[0m
+              [36m</li>[39m
+            [36m</ul>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      120 |
+      121 |     test("Users can publish or unpublish a question", () => {
+    > 122 |         const text = screen.getByText("Simple_Questions");
+          |                             ^
+      123 |         text.click();
+      124 |         const editButton = screen.getByText("Edit");
+      125 |         editButton.click();
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/quizzer/Quizzer.test.tsx:122:29)
+
+  ● Quizzer Tests › Users can filter the questions in a list so that only published questions are shown
+
+    TestingLibraryElementError: Unable to find an element with the text: Simple_Questions. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"quizzer"[39m
+        [36m>[39m
+          [36m<hr />[39m
+          [36m<h2[39m
+            [33mstyle[39m=[32m"color: white;"[39m
+          [36m>[39m
+            [0mApplication Sketch[0m
+          [36m</h2>[39m
+          [36m<hr />[39m
+          [36m<div[39m
+            [33mstyle[39m=[32m"color: white;"[39m
+          [36m>[39m
+            [36m<h2>[39m
+              [0mCompleted Features[0m
+            [36m</h2>[39m
+            [36m<ul[39m
+              [33mclass[39m=[32m"completedList"[39m
+            [36m>[39m
+              [36m<li>[39m
+                [0m [0m
+                [0mUsers can see a list of quizzes, including the quizzes title, description, and how many questions it has (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can select a specific quiz to see the questions, including the questions name, body, and points (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mQuiz questions can be of AT LEAST two types: a short answer question or multiple choice question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can enter or choose an answer for a quiz question, and be told if they are correct (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can see how many total points they have earned (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can clear out their existing answers for a quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can publish or unpublish a question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can filter the questions in a list so that only published questions are shown (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can edit the questions and fields of a quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can add a new quiz question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can delete an existing quiz question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can reorder quiz questions (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can add a new quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can delete an existing quiz (TESTED)[0m
+              [36m</li>[39m
+            [36m</ul>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      142 |
+      143 |     test("Users can filter the questions in a list so that only published questions are shown", () => {
+    > 144 |         const text = screen.getByText("Simple_Questions");
+          |                             ^
+      145 |         text.click();
+      146 |         const editButton = screen.getByText("Edit");
+      147 |         editButton.click();
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/quizzer/Quizzer.test.tsx:144:29)
+
+  ● Quizzer Tests › Users can delete an existing quiz
+
+    TestingLibraryElementError: Unable to find an element with the text: Simple_Questions. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"quizzer"[39m
+        [36m>[39m
+          [36m<hr />[39m
+          [36m<h2[39m
+            [33mstyle[39m=[32m"color: white;"[39m
+          [36m>[39m
+            [0mApplication Sketch[0m
+          [36m</h2>[39m
+          [36m<hr />[39m
+          [36m<div[39m
+            [33mstyle[39m=[32m"color: white;"[39m
+          [36m>[39m
+            [36m<h2>[39m
+              [0mCompleted Features[0m
+            [36m</h2>[39m
+            [36m<ul[39m
+              [33mclass[39m=[32m"completedList"[39m
+            [36m>[39m
+              [36m<li>[39m
+                [0m [0m
+                [0mUsers can see a list of quizzes, including the quizzes title, description, and how many questions it has (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can select a specific quiz to see the questions, including the questions name, body, and points (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mQuiz questions can be of AT LEAST two types: a short answer question or multiple choice question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can enter or choose an answer for a quiz question, and be told if they are correct (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can see how many total points they have earned (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can clear out their existing answers for a quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can publish or unpublish a question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can filter the questions in a list so that only published questions are shown (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can edit the questions and fields of a quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can add a new quiz question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can delete an existing quiz question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can reorder quiz questions (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can add a new quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can delete an existing quiz (TESTED)[0m
+              [36m</li>[39m
+            [36m</ul>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      162 |
+      163 |     test("Users can delete an existing quiz", () => {
+    > 164 |         const text = screen.getByText("Simple_Questions");
+          |                             ^
+      165 |         text.click();
+      166 |         const editButton = screen.getByText("Edit");
+      167 |         editButton.click();
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/quizzer/Quizzer.test.tsx:164:29)
+
+  ● Quizzer Tests › Users can add a new quiz question
+
+    TestingLibraryElementError: Unable to find an element with the text: Simple_Questions. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"quizzer"[39m
+        [36m>[39m
+          [36m<hr />[39m
+          [36m<h2[39m
+            [33mstyle[39m=[32m"color: white;"[39m
+          [36m>[39m
+            [0mApplication Sketch[0m
+          [36m</h2>[39m
+          [36m<hr />[39m
+          [36m<div[39m
+            [33mstyle[39m=[32m"color: white;"[39m
+          [36m>[39m
+            [36m<h2>[39m
+              [0mCompleted Features[0m
+            [36m</h2>[39m
+            [36m<ul[39m
+              [33mclass[39m=[32m"completedList"[39m
+            [36m>[39m
+              [36m<li>[39m
+                [0m [0m
+                [0mUsers can see a list of quizzes, including the quizzes title, description, and how many questions it has (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can select a specific quiz to see the questions, including the questions name, body, and points (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mQuiz questions can be of AT LEAST two types: a short answer question or multiple choice question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can enter or choose an answer for a quiz question, and be told if they are correct (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can see how many total points they have earned (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can clear out their existing answers for a quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can publish or unpublish a question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can filter the questions in a list so that only published questions are shown (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can edit the questions and fields of a quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can add a new quiz question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can delete an existing quiz question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can reorder quiz questions (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can add a new quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can delete an existing quiz (TESTED)[0m
+              [36m</li>[39m
+            [36m</ul>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      177 |
+      178 |     test("Users can add a new quiz question", () => {
+    > 179 |         const text = screen.getByText("Simple_Questions");
+          |                             ^
+      180 |         text.click();
+      181 |
+      182 |         expect(
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/quizzer/Quizzer.test.tsx:179:29)
+
+  ● Quizzer Tests › Users can reorder quiz questions
+
+    TestingLibraryElementError: Unable to find an element with the text: Simple_Questions. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"quizzer"[39m
+        [36m>[39m
+          [36m<hr />[39m
+          [36m<h2[39m
+            [33mstyle[39m=[32m"color: white;"[39m
+          [36m>[39m
+            [0mApplication Sketch[0m
+          [36m</h2>[39m
+          [36m<hr />[39m
+          [36m<div[39m
+            [33mstyle[39m=[32m"color: white;"[39m
+          [36m>[39m
+            [36m<h2>[39m
+              [0mCompleted Features[0m
+            [36m</h2>[39m
+            [36m<ul[39m
+              [33mclass[39m=[32m"completedList"[39m
+            [36m>[39m
+              [36m<li>[39m
+                [0m [0m
+                [0mUsers can see a list of quizzes, including the quizzes title, description, and how many questions it has (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can select a specific quiz to see the questions, including the questions name, body, and points (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mQuiz questions can be of AT LEAST two types: a short answer question or multiple choice question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can enter or choose an answer for a quiz question, and be told if they are correct (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can see how many total points they have earned (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can clear out their existing answers for a quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can publish or unpublish a question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can filter the questions in a list so that only published questions are shown (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can edit the questions and fields of a quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can add a new quiz question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can delete an existing quiz question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can reorder quiz questions (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can add a new quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can delete an existing quiz (TESTED)[0m
+              [36m</li>[39m
+            [36m</ul>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      206 |
+      207 |     test("Users can reorder quiz questions", () => {
+    > 208 |         const text = screen.getByText("Simple_Questions");
+          |                             ^
+      209 |         text.click();
+      210 |
+      211 |         const intialOrder = screen.getAllByTestId("question_body");
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/quizzer/Quizzer.test.tsx:208:29)
+
+  ● Quizzer Tests › Quiz questions can be of AT LEAST two types: a short answer question or multiple choice question
+
+    TestingLibraryElementError: Unable to find an element with the text: Simple_Questions. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"quizzer"[39m
+        [36m>[39m
+          [36m<hr />[39m
+          [36m<h2[39m
+            [33mstyle[39m=[32m"color: white;"[39m
+          [36m>[39m
+            [0mApplication Sketch[0m
+          [36m</h2>[39m
+          [36m<hr />[39m
+          [36m<div[39m
+            [33mstyle[39m=[32m"color: white;"[39m
+          [36m>[39m
+            [36m<h2>[39m
+              [0mCompleted Features[0m
+            [36m</h2>[39m
+            [36m<ul[39m
+              [33mclass[39m=[32m"completedList"[39m
+            [36m>[39m
+              [36m<li>[39m
+                [0m [0m
+                [0mUsers can see a list of quizzes, including the quizzes title, description, and how many questions it has (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can select a specific quiz to see the questions, including the questions name, body, and points (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mQuiz questions can be of AT LEAST two types: a short answer question or multiple choice question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can enter or choose an answer for a quiz question, and be told if they are correct (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can see how many total points they have earned (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can clear out their existing answers for a quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can publish or unpublish a question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can filter the questions in a list so that only published questions are shown (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can edit the questions and fields of a quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can add a new quiz question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can delete an existing quiz question (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can reorder quiz questions (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can add a new quiz (TESTED)[0m
+              [36m</li>[39m
+              [36m<li>[39m
+                [0mUsers can delete an existing quiz (TESTED)[0m
+              [36m</li>[39m
+            [36m</ul>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      230 |
+      231 |     test("Quiz questions can be of AT LEAST two types: a short answer question or multiple choice question", () => {
+    > 232 |         const text = screen.getByText("Simple_Questions");
+          |                             ^
+      233 |         text.click();
+      234 |
+      235 |         const editButton = screen.getByText("Edit");
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/quizzer/Quizzer.test.tsx:232:29)
+
+PASS src/App.test.tsx
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   17.39 |       50 |   16.66 |   17.39 |                   
+ src               |   66.66 |       50 |      50 |   66.66 |                   
+  App.tsx          |   66.66 |       50 |      50 |   66.66 | 17                
+ src/interfaces    |       0 |        0 |       0 |       0 |                   
+  question.ts      |       0 |        0 |       0 |       0 |                   
+  quiz.ts          |       0 |        0 |       0 |       0 |                   
+ src/quizzer       |      10 |      100 |      10 |      10 |                   
+  AddQuizModal.tsx |       0 |      100 |       0 |       0 | 4-27              
+  QuestionEdit.tsx |       0 |      100 |       0 |       0 | 5-7               
+  QuizCard.tsx     |       0 |      100 |       0 |       0 | 5-7               
+  QuizEdit.tsx     |       0 |      100 |       0 |       0 | 5-8               
+  QuizExpanded.tsx |       0 |      100 |       0 |       0 | 5-8               
+  QuizList.tsx     |       0 |      100 |       0 |       0 | 3-6               
+  QuizQuestion.tsx |       0 |      100 |       0 |       0 | 3-6               
+  QuizView.tsx     |       0 |      100 |       0 |       0 | 5-8               
+  Quizzer.tsx      |     100 |      100 |     100 |     100 |                   
+-------------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 1 failed, 1 passed, 2 total
+Tests:       12 failed, 3 passed, 15 total
+Snapshots:   0 total
+Time:        3.541 s
+Ran all test suites.
